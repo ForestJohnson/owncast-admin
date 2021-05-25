@@ -94,6 +94,7 @@ export interface ConfigDetails {
   ffmpegPath: string;
   instanceDetails: ConfigInstanceDetailsFields;
   rtmpServerPort: string;
+  directHLSInputURL: string;
   s3: S3Field;
   streamKey: string;
   videoSettings: VideoSettingsFields;

@@ -16,6 +16,7 @@ export const API_INSTANCE_URL = '/serverurl';
 export const API_LOGO = '/logo';
 export const API_NSFW_SWITCH = '/nsfw';
 export const API_RTMP_PORT = '/rtmpserverport';
+export const API_DIRECT_HLS_INPUT_URL = '/directhlsinputurl';
 export const API_S3_INFO = '/s3';
 export const API_SERVER_SUMMARY = '/serversummary';
 export const API_SERVER_WELCOME_MESSAGE = '/welcomemessage';
@@ -122,6 +123,15 @@ export const TEXTFIELD_PROPS_RTMP_PORT = {
   placeholder: '1935',
   label: 'RTMP port',
   tip: 'What port should accept inbound broadcasts? Default is 1935',
+  required: true,
+};
+export const TEXTFIELD_PROPS_DIRECT_HLS_INPUT_URL = {
+  apiPath: API_DIRECT_HLS_INPUT_URL,
+  configPath: '',
+  maxLength: 255,
+  placeholder: 'samba://192.168.0.46/Public',
+  label: 'Direct HLS Input URL',
+  tip: 'A url to a folder where another process (OBS) writes HLS segments. Currently samba is the only supported protocol.',
   required: true,
 };
 export const TEXTFIELD_PROPS_INSTANCE_URL = {

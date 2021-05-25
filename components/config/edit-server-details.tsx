@@ -12,6 +12,7 @@ import { AlertMessageContext } from '../../utils/alert-message-context';
 import {
   TEXTFIELD_PROPS_FFMPEG,
   TEXTFIELD_PROPS_RTMP_PORT,
+  TEXTFIELD_PROPS_DIRECT_HLS_INPUT_URL,
   TEXTFIELD_PROPS_STREAM_KEY,
   TEXTFIELD_PROPS_WEB_PORT,
   FIELD_PROPS_DISABLE_CHAT,
@@ -29,7 +30,7 @@ export default function EditInstanceDetails() {
 
   const { serverConfig } = serverStatusData || {};
 
-  const { chatDisabled, streamKey, ffmpegPath, rtmpServerPort, webServerPort, yp } = serverConfig;
+  const { chatDisabled, streamKey, ffmpegPath, rtmpServerPort, directHLSInputURL, webServerPort, yp } = serverConfig;
 
   const [copyIsVisible, setCopyVisible] = useState(false);
 
@@ -40,6 +41,7 @@ export default function EditInstanceDetails() {
       streamKey,
       ffmpegPath,
       rtmpServerPort,
+      directHLSInputURL,
       webServerPort,
       chatDisabled,
     });
@@ -142,6 +144,14 @@ export default function EditInstanceDetails() {
         value={formDataValues.rtmpServerPort}
         initialValue={rtmpServerPort}
         type={TEXTFIELD_TYPE_NUMBER}
+        onChange={handleFieldChange}
+        onSubmit={showConfigurationRestartMessage}
+      />
+      <TextFieldWithSubmit
+        fieldName="directHLSInputURL"
+        {...TEXTFIELD_PROPS_DIRECT_HLS_INPUT_URL}
+        value={formDataValues.directHLSInputURL}
+        initialValue={directHLSInputURL}
         onChange={handleFieldChange}
         onSubmit={showConfigurationRestartMessage}
       />

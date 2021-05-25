@@ -24,6 +24,7 @@ export const initialServerConfigState: ConfigDetails = {
   },
   ffmpegPath: '',
   rtmpServerPort: '',
+  directHLSInputURL: '',
   webServerPort: '',
   chatDisabled: false,
   s3: {
