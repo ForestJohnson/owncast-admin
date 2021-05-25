@@ -22,7 +22,6 @@ import {
 
 import { UpdateArgs } from '../../types/config-section';
 import ToggleSwitch from './form-toggleswitch';
-import EditLogo from './form-imagefield';
 import ImageField from './form-imagefield';
 
 const { Title } = Typography;
