@@ -129,9 +129,9 @@ export const TEXTFIELD_PROPS_DIRECT_HLS_INPUT_URL = {
   apiPath: API_DIRECT_HLS_INPUT_URL,
   configPath: '',
   maxLength: 255,
-  placeholder: 'samba://192.168.0.46/Public',
+  placeholder: 'samba://visitor:visitor_account_password@192.168.0.46/Public',
   label: 'Direct HLS Input URL',
-  tip: 'A url to a folder where another process (OBS) writes HLS segments. Currently samba is the only supported protocol.',
+  tip: 'A url to a folder where another process (OBS) writes HLS segments. Currently samba is the only supported protocol. Username & password are optional, if omitted then "guest" with an empty password will be used. Windows does not support guest login any more ever since the WannaCry ransomware virus exploited it. See https://www.windowscentral.com/how-create-guest-account-windows-10 for instructions on how to create a secure visitor account with a password.',
   required: true,
 };
 export const TEXTFIELD_PROPS_INSTANCE_URL = {
