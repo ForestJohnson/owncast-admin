@@ -20,6 +20,7 @@ import {
 
 import { UpdateArgs } from '../../types/config-section';
 import ResetYP from './reset-yp';
+import SelfDestruct from './self-destruct';
 
 const { Panel } = Collapse;
 
@@ -162,13 +163,19 @@ export default function EditInstanceDetails() {
         onChange={handleChatDisableChange}
       />
 
-      {yp.enabled && (
-        <Collapse className="advanced-settings">
-          <Panel header="Advanced Settings" key="1">
-            <ResetYP />
-          </Panel>
-        </Collapse>
-      )}
+      
+      <Collapse className="advanced-settings">
+        <Panel header="Advanced Settings" key="1">
+          { yp.enabled && (
+            <>
+              <ResetYP />
+              <hr/>
+            </>
+          )}
+          <SelfDestruct />
+        </Panel>
+      </Collapse>
+      
     </div>
   );
 }

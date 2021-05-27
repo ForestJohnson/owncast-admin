@@ -13,6 +13,8 @@ export const STATUS = `${API_LOCATION}status`;
 // Disconnect inbound stream
 export const DISCONNECT = `${API_LOCATION}disconnect`;
 
+export const SELF_DESTRUCT = `${API_LOCATION}selfdestruct`;
+
 // Change the current streaming key in memory
 export const STREAMKEY_CHANGE = `${API_LOCATION}changekey`;
 
